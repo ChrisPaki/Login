@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center">
+    <form action="@Url.Action("IniciarSesion","Login")" method="post">
+        @if (ViewData["Mensaje"]!= null)
+        {
+            <h4>@ViewData["Mensaje"]</h4>
+        }
+        
+    <input type="text" name="userUsuario" placeholder="Usuario" />
+    <input type="password" name="passUsuario" placeholder="Contraseña"/>
+    <br /><br />
+    <button type="submit">Iniciar Sesión</button>
+    </form>
+    <br />
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
